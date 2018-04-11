@@ -168,6 +168,7 @@
     <Content Include="Lab\01\HelloWorld.html" />
     <Content Include="Lab\01\Vfor.html" />
     <Content Include="Lab\01\VModel.html" />
+    <Content Include="Lab\01\Von.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
