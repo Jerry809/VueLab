@@ -166,6 +166,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Lab\01\HelloWorld.html" />
+    <Content Include="Lab\01\MoneyTransfer.html" />
     <Content Include="Lab\01\Todo.html" />
     <Content Include="Lab\01\Vfor.html" />
     <Content Include="Lab\01\VModel.html" />

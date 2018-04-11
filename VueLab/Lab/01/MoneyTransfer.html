@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        輸入台幣: <input type="text" v-model="NT" />
+
+        <ul>
+            <li>日幣: {{Japen }}</li>
+            <li>美元: {{America }}</li>
+        </ul>
+    </div>
+    <script src="../../Scripts/vue.js"></script>
+    <script>
+        var vm = new Vue({
+
+            el: "#app",
+            data: {
+                NT: 0
+            },
+            computed: {
+                Japen: function () { return this.NT / 0.27 },
+                America: function () { return this.NT / 30 }
+            }
+        })
+    </script>
+</body>
+</html>

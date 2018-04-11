@@ -6,29 +6,45 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" value="" placeholder="請輸入代辦事項" v-model="newTodo" @keyup.enter="addTodo(newTodo)"/>
+        <input type="text" value="" placeholder="請輸入代辦事項" v-model="newTodo" @keyup.enter="addTodo(newTodo)" />
         <h2>代辦事項</h2>
+        <a :href="url">google</a>
+        <input type="button" value="全選" @click="selectedAll()"/>
         <ul>
-            <li v-for="item in todos">
-                {{item.content}} - <a href="#" @click.prevent @click="removeTodo(item)">刪除</a>
+            <li v-for="item in todos" >
+                <input type="checkbox" v-model="item.completed" />
+                <span :class="{'del': item.completed}">{{item.content}}</span> - <a href="#" @click.prevent @click="removeTodo(item)">刪除</a>
             </li>
         </ul>
     </div>
     <script src="../../Scripts/vue.js"></script>
+    <style>
+        .del{
+            text-decoration:line-through;
+        }
+    </style>
     <script>
         var vm = new Vue({
-
+            //text-decoration: line-through;
             el: "#app",
             data: {
                 todos: [],
-                newTodo: ''
+                newTodo: '',
+                c: 'checked',
+                url: 'http://www.google.com',    
+                isA: true
             },
             methods: {
                 addTodo: function (todo) {
-                    this.todos.push({ content: todo, completed: false });
+                    this.todos.push({ content: todo, completed: false, });
                 },
                 removeTodo: function (todo) {
                     this.todos.splice(this.todos.indexOf(todo), 1);
+                },
+                selectedAll: function () {
+                    for (var i = 0; i < this.todos.length; i++) {
+                        this.todos[i].completed = true;
+                    }
                 }
             }
 
