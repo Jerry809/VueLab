@@ -1,3 +1,6 @@
 ﻿# Vue Lab
-- 01
- > hello world
+- Lab 01
+  >  - hello world
+  >  - v-model
+  >  - v-for
+  >  - v-on
